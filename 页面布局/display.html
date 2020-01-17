@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #box1 {
+            width: 800px;
+            height: 80px;
+            border: 1px solid blue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #box1 > div {
+            width: 200px;
+            height: 60px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <select id="select">
+        <option value="0">center</option>
+        <option value="1">space-around</option>
+    </select>
+    <div id="box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <script>
+        let selectDom = document.getElementById('select');
+        selectDom.addEventListener('change',function(e){
+            console.log(e)
+        })
+    </script>
+</body>
+</html>

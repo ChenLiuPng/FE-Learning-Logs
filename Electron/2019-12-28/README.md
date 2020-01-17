@@ -98,3 +98,62 @@ app.on("ready", () => {
 运行`npm start`
 
 ![运行图1](./asset/1.png)
+
+
+更新index.html文件 引入renderer.js
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        require('./renderer.js'); // 引入
+    </script>
+</body>
+</html>
+
+```
+
+更新style.css
+```css
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;;
+}
+
+body, input {
+    font: menu;
+}
+```
+`font:menu`让我们可以在CSS中使用系统字体
+
+更新index.html 引入样式表文件style.css
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        require('./renderer.js');
+    </script>
+</body>
+</html>
+```

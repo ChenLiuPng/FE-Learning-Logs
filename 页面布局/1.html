@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  let dom  = document.getElementById('layer-photos')
+  console.log(dom.children)
+	for(let i = 0;i<dom.length;i++){
+		console.log(dom[i].src)
+	}
+	
+});
+</script>
+</head>
+<body>
+
+                       <div id="layer-photos" class="layer-photos">
+                     
+                        <img class="flyImg img-thumbnail" src 
+                             style="width: 550px; height: 773px" onerror="this.style.display='none';"  / >
+                        <img class="flyImg img-thumbnail" src  
+                             style="width: 550px; height: 773px"  onerror="this.style.display='none';" />
+
+                        <img class="flyImg img-thumbnail" src 
+                             style="width: 550px; height: 773px"  onerror="this.style.display='none';"/>
+
+                    </div>
+</body>
+</html>

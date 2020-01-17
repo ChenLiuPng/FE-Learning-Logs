@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="chart" style="width: 600px;height: 300px;"></div>
+    <script src="../node_modules/flotr2/flotr2.min.js"></script>
+    <script>
+        var wins = [
+            [
+                [2006,11],
+                [2007,13],
+                [2008,28],
+                [2009,30],
+                [2010,13],
+                [2011,15],
+                [2012,13]
+            ]
+        ];
+        let flotr = function() {
+            Flotr.draw(
+                document.getElementById("chart"),
+                wins,
+                {
+                    bars: {
+                        show: true,
+                        barWidth:0.5
+                    },
+                    yaxis:{
+                        min: 0,
+                        tickDecimals: 0
+                    }
+                }
+            )
+        }
+        flotr();
+    </script>
+</body>
+</html>

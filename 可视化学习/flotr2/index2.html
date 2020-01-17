@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="ie=edge"
+    >
+    <title>Document</title>
+</head>
+
+<body>
+    <div
+        id="chart"
+        style="width: 600px;height: 300px;"
+    ></div>
+    <script src="../node_modules/flotr2/flotr2.min.js"></script>
+    <script>
+        let wins = [
+            [
+                [0, 13],
+                [1, 11],
+                [2, 15],
+                [3, 16],
+                [4, 17],
+                [5, 18],
+                [6, 19]
+            ]
+        ];
+        let years = [
+            [0, "2006"],
+            [1, "2007"],
+            [2, "2008"],
+            [3, "2009"],
+            [4, "2010"],
+            [5, "2011"],
+            [6, "2012"]
+        ]
+        let flotr = function () {
+            Flotr.draw(
+                document.getElementById("chart"),
+                wins,
+                {
+                    title: "mmp",
+                    colors: ["#89AFD2"],
+                    bars: {
+                        show: true,
+                        barWidth: 0.5,
+                        shadowSize:0,
+                        fillOpacity:1,
+                        lineWidth:0
+                    },
+                    yaxis: {
+                        min: 0,
+                        tickDecimals: 0
+                    },
+                    xaxis: {
+                        ticks: years
+                    }
+                }
+            )
+        }
+        flotr();
+    </script>
+</body>
+
+</html>
